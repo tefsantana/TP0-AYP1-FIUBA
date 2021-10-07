@@ -25,6 +25,7 @@ def numeros_amigos(a: int, b: int) -> bool:
     '''
     suma_divisores_a: int = 0
     suma_divisores_b: int = 0
+    son_amigos: bool = True
 
     for posible_divisor_a in range(1, a):
 
@@ -38,4 +39,9 @@ def numeros_amigos(a: int, b: int) -> bool:
             suma_divisores_b += posible_divisor_b
     
     if (suma_divisores_a == b) or (suma_divisores_b == a):
-        return True
+        son_amigos = True
+    
+    else:
+        son_amigos = False
+    
+    return son_amigos
